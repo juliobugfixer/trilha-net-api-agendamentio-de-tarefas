@@ -24,12 +24,13 @@ namespace TrilhaApiDesafio.Controllers
             return Ok(tarefa);
         }
 
-        /*[HttpGet("ObterTodos")]
+        //Desafio Concluído
+        [HttpGet("ObterTodos")]
         public IActionResult ObterTodos()
         {
-            
-            return Ok();
-        }*/
+            var tarefas = _context.Tarefas.ToList();
+            return Ok(tarefas);
+        }
 
         //Desafio Concluído
         [HttpGet("ObterPorTitulo")]
